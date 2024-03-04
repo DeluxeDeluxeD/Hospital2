@@ -1,0 +1,29 @@
+﻿<Page x:Class="Hospital.MedicalDiagnosticProcedure"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="MedicalDiagnosticProcedure">
+
+    <Grid Background="White">
+        <StackPanel Orientation="Vertical">
+            <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+                <TextBlock Text="История лечебно-диагностических мероприятий" HorizontalAlignment="Center"  Height="30" VerticalAlignment="Top" FontWeight="Bold" FontSize="24"/>
+                <Button Content="Экспортировать в xlsx" HorizontalAlignment="Right" Width="130" Height="30" Margin="10 5 10 5" BorderBrush="{x:Null}" Background="#009933" Foreground="White" Click="ExportXlsxButton"/>
+                <Button Content="Экспортировать в csv" HorizontalAlignment="Right" Width="130" Height="30" Margin="0 5 10 5" BorderBrush="{x:Null}" Background="#009933" Foreground="White" Click="ExportCsvButton"/>
+                <Button Content="Экспортировать в doc" HorizontalAlignment="Right" Width="130" Height="30" Margin="0 5 10 5" BorderBrush="{x:Null}" Background="#009933" Foreground="White" Click="ExportDocButton"/>
+            </StackPanel>
+            <DataGrid x:Name="DGridPatients" AutoGenerateColumns="False" IsReadOnly="True" HorizontalAlignment="Stretch">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Patients.Surname}" FontSize="20" Header="Фамилия" Width="140"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Patients.MedicalCardNumber}" FontSize="20" Header="Медицинская карта" Width="130"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding MedicalDiagnosticProcedure.EventType}" FontSize="20" Header="Диагностические мероприятия" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding MedicalDiagnosticProcedure.Results}" FontSize="20" Header="Результаты" Width="*"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding MedicalDiagnosticProcedure.Recommendations}" FontSize="20" Header="Рекомендации" Width="*"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

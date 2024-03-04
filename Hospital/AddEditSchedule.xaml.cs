@@ -13,16 +13,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hospital2
+namespace Hospital
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddEdit : Page
     {
-        public MainWindow()
+        private ReceptionSchedule _currentReceptionSchedule = new ReceptionSchedule();
+
+        public AddEdit()
         {
             InitializeComponent();
+            DataContext = _currentReceptionSchedule;
+        }
+
+        private void SaveButton(object sender, RoutedEventArgs e)
+        {
+            StringBuilder errors = new StringBuilder();
+            if (errors.Length > 0)
+                MessageBox.Show(errors.ToString());
         }
     }
 }

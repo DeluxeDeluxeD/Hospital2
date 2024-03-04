@@ -1,0 +1,14 @@
+string connectionString = "Server=SPC\\STP;Database=Hospital;Integrated Security=True;";
+string databaseName = "Hospital";
+string backupPath = "D:\\";
+
+using (SqlConnection connection = new SqlConnection(connectionString))
+{
+    connection.Open();
+    string backupQuery = $"BACKUP DATABASE {databaseName} TO DISK = '{backupPath + databaseName + "_" + DateTime.Now.ToString("yyyy-MM-dd_HHmmss") + ".bak"}'";
+    using (SqlCommand command = new SqlCommand(backupQuery, connection))
+    {
+        command.ExecuteNonQuery();
+        Console.WriteLine("Резервная копия успешно создана.");
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="59f2cb2bfa784211861a6c3c49dc1877" Name="Diagram1">
+        <EntityTypeShape EntityType="HospitalModel.Doctors" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalModel.HistoryHospitalizations" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalModel.MedicalDiagnosticProcedure" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalModel.Patients" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalModel.ReceptionSchedule" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="HospitalModel.FK__MedicalDi__IdDoc__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalModel.FK__Reception__IdDoc__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalModel.FK__HistoryHo__IdPat__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="HospitalModel.FK__MedicalDi__IdPat__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
